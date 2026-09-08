@@ -1,77 +1,56 @@
-// ==========================================
-// WEDDING DATE
-// ==========================================
-const weddingDate = new Date(
-  "January 7, 2027 16:00:00"
-).getTime();
-// ==========================================
-// COUNTDOWN
-// ==========================================
+function openInvitation() {
+  document.querySelector(".opening").style.display = "none";
+  document.querySelector("#invitation").style.display = "block";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+const weddingDate = new Date("January 7, 2027 16:00:00").getTime();
 function updateCountdown() {
   const now = new Date().getTime();
-  const difference = weddingDate - now;
-  if (difference <= 0) {
-    document.getElementById("days").innerHTML = "00";
-    document.getElementById("hours").innerHTML = "00";
-    document.getElementById("minutes").innerHTML = "00";
-    document.getElementById("seconds").innerHTML = "00";
+  const distance = weddingDate - now;
+  if (distance <= 0) {
+    document.getElementById("days").innerText = "00";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
     return;
   }
-  const days = Math.floor(
-    difference / (1000 * 60 * 60 * 24)
-  );
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
-    (difference / (1000 * 60 * 60)) % 24
+    (distance / (1000 * 60 * 60)) % 24
   );
   const minutes = Math.floor(
-    (difference / (1000 * 60)) % 60
+    (distance / (1000 * 60)) % 60
   );
   const seconds = Math.floor(
-    (difference / 1000) % 60
+    (distance / 1000) % 60
   );
-  document.getElementById("days").innerHTML =
+  document.getElementById("days").innerText =
     String(days).padStart(2, "0");
-  document.getElementById("hours").innerHTML =
+  document.getElementById("hours").innerText =
     String(hours).padStart(2, "0");
-  document.getElementById("minutes").innerHTML =
+  document.getElementById("minutes").innerText =
     String(minutes).padStart(2, "0");
-  document.getElementById("seconds").innerHTML =
+  document.getElementById("seconds").innerText =
     String(seconds).padStart(2, "0");
 }
-// Update every second
-updateCountdown();
 setInterval(updateCountdown, 1000);
-// ==========================================
-// SCROLL ANIMATION
-// ==========================================
-const sections = document.querySelectorAll("section");
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform =
-          "translateY(0)";
-      }
-    });
-  },
-  {
-    threshold: 0.15
+updateCountdown();
+function toggleMusic() {
+  const music = document.getElementById("weddingMusic");
+  const button = document.getElementById("musicButton");
+  if (music.paused) {
+    music.play()
+      .then(() => {
+        button.innerText = "⏸️";
+      })
+      .catch(() => {
+        alert("Tap the music button again to start the music.");
+      });
+  } else {
+    music.pause();
+    button.innerText = "🎵";
   }
-);
-sections.forEach((section) => {
-  section.style.opacity = "0";
-  section.style.transform =
-    "translateY(30px)";
-  section.style.transition =
-    "opacity 1s ease, transform 1s ease";
-  observer.observe(section);
-});
-// ==========================================
-// PREVENT FLASH ON FIRST SECTION
-// ==========================================
-window.addEventListener("load", () => {
-  document.querySelector(".hero").style.opacity = "1";
-  document.querySelector(".hero").style.transform =
-    "translateY(0)";
-});
+}
