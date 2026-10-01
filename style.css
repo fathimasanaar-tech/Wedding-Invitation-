@@ -9,431 +9,505 @@ html {
 }
 
 body {
-  background-color: #3a0712;
-  background-image: url("IMG_7223.jpeg");
-  background-size: cover;
-  background-position: top center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #f8e6c0;
   font-family: Georgia, "Times New Roman", serif;
+  background: #3b0b16;
+  color: #f4dfb2;
   text-align: center;
 }
 
-/* ---------------- OPENING ---------------- */
+/* =========================
+   OPENING
+========================= */
 
 .opening {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 25px;
 
   background:
-    radial-gradient(
-      circle at center,
-      rgba(111, 35, 48, 0.95),
-      rgba(52, 5, 15, 1)
-    );
-}
-
-.opening-content {
-  width: 100%;
-  max-width: 520px;
-  padding: 55px 25px;
-
-  border: 1px solid #c99a45;
-  background: rgba(45, 4, 12, 0.35);
-
-  box-shadow:
-    0 0 35px rgba(0, 0, 0, 0.45);
+    linear-gradient(rgba(49, 5, 15, 0.72), rgba(49, 5, 15, 0.82)),
+    url("IMG_7223.jpeg") center top / cover no-repeat;
 
   position: relative;
 }
 
-.opening-content::before,
-.opening-content::after {
-  content: "❦";
-  position: absolute;
-  color: #d8b56b;
-  font-size: 25px;
-}
+.opening-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 48px 25px;
 
-.opening-content::before {
-  top: 15px;
-  left: 18px;
-}
+  border: 1px solid rgba(221, 184, 101, 0.75);
+  background: rgba(45, 4, 12, 0.55);
 
-.opening-content::after {
-  bottom: 15px;
-  right: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
 }
 
 .bismillah {
   font-size: 25px;
   line-height: 2;
-  color: #e2c47e;
-  margin-bottom: 30px;
+  color: #e4c47c;
 }
 
-.tiny-text {
-  font-size: 10px;
+.opening-small,
+.gold-small {
+  font-size: 9px;
   letter-spacing: 4px;
-  color: #d5bd8d;
-  margin-bottom: 18px;
+  color: #d8b777;
+  margin: 20px 0;
 }
 
-.invite-line {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #ead8b1;
-  margin-bottom: 12px;
-}
-
-.nikkah-title {
+.opening-invite {
   font-size: 11px;
-  letter-spacing: 4px;
-  color: #c99a45;
+  letter-spacing: 2px;
+  color: #ead9b2;
 }
 
 .opening h1 {
   font-size: 48px;
-  line-height: 1.25;
   font-weight: normal;
-  color: #f3d48d;
+  line-height: 1.1;
+  color: #f3d28b;
   margin: 25px 0;
 }
 
 .opening h1 span {
   display: block;
-  font-size: 28px;
-  color: #c99a45;
-  margin: 8px 0;
+  font-size: 25px;
+  margin: 9px 0;
+  color: #c99b4c;
 }
 
-.date-opening {
-  font-size: 14px;
-  letter-spacing: 5px;
-  color: #e9d5a6;
-  margin-top: 25px;
+.opening-date {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #ead6aa;
 }
 
 .opening button {
   margin-top: 35px;
   padding: 13px 30px;
 
-  background: transparent;
-  border: 1px solid #d2a958;
+  border: 1px solid #d2aa60;
   border-radius: 30px;
 
-  color: #f3d48d;
-  font-family: inherit;
-  font-size: 11px;
-  letter-spacing: 3px;
+  background: transparent;
+  color: #f3d28b;
 
-  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 3px;
 }
 
-/* ---------------- MAIN ---------------- */
+
+/* =========================
+   MAIN BACKGROUND
+========================= */
 
 #invitation {
   display: none;
 
   background:
     linear-gradient(
-      rgba(58, 7, 18, 0.18),
-      rgba(58, 7, 18, 0.28)
-    );
+      rgba(54, 7, 17, 0.72),
+      rgba(54, 7, 17, 0.78)
+    ),
+    url("IMG_7223.jpeg") center top / cover fixed;
+
+  overflow: hidden;
 }
 
-/* ---------------- HERO ---------------- */
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section-frame {
+  position: relative;
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 24px;
+
+  border-bottom: 1px solid rgba(214, 173, 87, 0.25);
+}
+
+.section-frame::before {
+  content: "❦";
+  color: #c99b4c;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 50px 20px;
-
-  position: relative;
-
-  border-bottom: 1px solid rgba(201, 154, 69, 0.4);
+  min-height: 100svh;
 }
 
-.hero .bismillah {
+.hero::before {
+  display: none;
+}
+
+.hero-bismillah {
   margin-bottom: 25px;
 }
 
-.hero h2 {
-  font-size: 58px;
+.hero-title {
+  font-size: 22px;
   font-weight: normal;
-  color: #f4d48d;
+  letter-spacing: 2px;
+  color: #e7d2a1;
+  margin-bottom: 25px;
+}
+
+.names {
+  font-size: 54px;
   line-height: 1.05;
+  font-weight: normal;
+  color: #f2d18b;
 }
 
-.ampersand {
-  font-size: 30px;
-  color: #c99a45;
+.names span {
+  display: block;
+  font-size: 27px;
   margin: 10px 0;
-}
-
-.floral-line {
-  font-size: 35px;
-  color: #c99a45;
-  margin: 30px 0;
+  color: #c99b4c;
 }
 
 .hero-date {
-  font-size: 12px;
+  margin-top: 35px;
+  font-size: 15px;
   letter-spacing: 3px;
-  line-height: 2;
-  color: #dfc797;
-}
-
-.hero-date strong {
-  font-size: 17px;
-  color: #f0d7a1;
+  color: #ead8b0;
 }
 
 .hero-time {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 14px;
   letter-spacing: 3px;
-  color: #c99a45;
+  color: #c99b4c;
 }
 
-/* ---------------- SECTIONS ---------------- */
 
-.section {
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
   min-height: 65vh;
-  padding: 90px 22px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border-bottom: 1px solid rgba(201, 154, 69, 0.28);
 }
 
-.ornament {
-  font-size: 20px;
-  color: #c99a45;
-  margin-bottom: 25px;
-}
-
-.section h3 {
-  font-size: 25px;
+.countdown-section h2,
+.couple-section h2,
+.dua-section h2,
+.event-section h2,
+.venue-section h2,
+.calendar-section h2,
+.closing h2 {
+  font-size: 29px;
   font-weight: normal;
-  letter-spacing: 3px;
-  color: #f2d38c;
-  margin-bottom: 35px;
+  color: #f0d08a;
 }
-
-/* ---------------- COUNTDOWN ---------------- */
 
 .countdown {
   display: flex;
   justify-content: center;
+  gap: 8px;
   flex-wrap: wrap;
-  gap: 9px;
-  max-width: 430px;
+  margin-top: 35px;
 }
 
-.count-box {
-  width: 82px;
-  min-height: 85px;
+.count-item {
+  width: 73px;
+  min-height: 78px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  border: 1px solid #966d35;
-  background: rgba(20, 2, 7, 0.2);
+  border: 1px solid rgba(204, 160, 74, 0.65);
+  background: rgba(32, 3, 9, 0.38);
 }
 
-.count-box span {
-  font-size: 28px;
-  color: #f3d48d;
+.count-item strong {
+  font-size: 24px;
+  font-weight: normal;
+  color: #f2d18b;
 }
 
-.count-box small {
+.count-item span {
   margin-top: 7px;
-
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 2px;
-
-  color: #cdb889;
+  color: #cdb98d;
 }
 
-/* ---------------- EVENT ---------------- */
 
-.event-date {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #ead6ac;
+/* =========================
+   COUPLE
+========================= */
+
+.couple-section {
+  min-height: 85vh;
 }
 
-.event-time {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #c99a45;
+.person {
+  margin: 25px 0;
 }
 
-/* ---------------- VENUE ---------------- */
-
-.venue-label {
-  font-size: 10px;
-  letter-spacing: 4px;
-  color: #c99a45;
-  margin-bottom: 15px;
+.person h2 {
+  font-size: 30px;
 }
 
-.venue-name {
-  font-size: 30px !important;
-  letter-spacing: 0 !important;
-  margin-bottom: 30px !important;
+.person p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #d9c7a0;
 }
 
-.map-button {
-  display: inline-block;
-
-  padding: 13px 24px;
-
-  border: 1px solid #c99a45;
-  border-radius: 30px;
-
-  color: #f2d38c;
-  text-decoration: none;
-
-  font-size: 10px;
-  letter-spacing: 2px;
+.person .parents {
+  font-size: 15px;
+  color: #e9d19a;
 }
 
-/* ---------------- DUA ---------------- */
+.heart {
+  font-size: 30px;
+  color: #c99b4c;
+  margin: 10px 0;
+}
+
+
+/* =========================
+   DUA
+========================= */
 
 .dua-section {
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 .arabic-dua {
-  max-width: 600px;
+  max-width: 650px;
+  margin-top: 35px;
 
   font-size: 27px;
   line-height: 2.1;
 
-  color: #f2d38c;
+  color: #f0d08a;
 }
 
-.dua-translation {
+.dua-text {
   max-width: 500px;
-
   margin-top: 30px;
 
   font-size: 14px;
   line-height: 1.9;
 
-  color: #d8c49c;
+  color: #d8c69e;
   font-style: italic;
 }
 
-/* ---------------- FOOTER ---------------- */
 
-.footer {
-  min-height: 40vh;
+/* =========================
+   EVENT
+========================= */
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.event-card {
+  width: 100%;
+  max-width: 330px;
 
-  padding: 60px 20px;
+  margin-top: 35px;
+  padding: 35px 20px;
 
-  background: #27030c;
+  border: 1px solid rgba(205, 163, 79, 0.7);
+  background: rgba(31, 3, 9, 0.38);
 }
 
-.footer p {
+.event-icon {
+  font-size: 28px;
+  color: #c99b4c;
+  margin-bottom: 20px;
+}
+
+.event-date {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #d7c092;
+}
+
+.event-date-big {
+  margin-top: 10px;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: #f1d18b;
+}
+
+.event-time {
+  margin-top: 15px;
+  font-size: 17px;
+  color: #c99b4c;
+}
+
+
+/* =========================
+   VENUE
+========================= */
+
+.venue-description {
+  max-width: 430px;
+  margin: 25px auto;
+
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d8c59c;
+}
+
+.map-button,
+.calendar-button {
+  display: inline-block;
+
+  padding: 13px 24px;
+
+  border: 1px solid #c99b4c;
+  border-radius: 30px;
+
+  background: transparent;
+  color: #f0d08a;
+
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar-section {
+  min-height: 60vh;
+}
+
+.calendar-section h2 {
+  max-width: 400px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+  min-height: 75vh;
+}
+
+.closing::before {
+  display: none;
+}
+
+.closing .bismillah {
+  margin-bottom: 30px;
+}
+
+.closing-small {
   font-size: 10px;
   letter-spacing: 4px;
-  color: #c5ae80;
-  margin-bottom: 18px;
+  color: #cdb78a;
+  margin-bottom: 25px;
 }
 
-.footer h4 {
-  font-size: 28px;
-  font-weight: normal;
-  color: #f3d48d;
+.closing h2 {
+  font-size: 48px;
+  line-height: 1.1;
 }
 
-/* ---------------- MUSIC ---------------- */
+.closing h2 span {
+  display: block;
+  font-size: 25px;
+  margin: 8px;
+  color: #c99b4c;
+}
+
+.closing-date {
+  margin-top: 30px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #d8c69d;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
 
 .music-button {
   position: fixed;
-
-  right: 20px;
-  bottom: 20px;
+  right: 18px;
+  bottom: 18px;
 
   width: 50px;
   height: 50px;
 
   border-radius: 50%;
-  border: 1px solid #d2a958;
+  border: 1px solid #d3aa5d;
 
-  background: #4a0b18;
-  color: #f3d48d;
+  background: #4a0a17;
+  color: #f2d18b;
 
   font-size: 20px;
 
   z-index: 100;
-
-  cursor: pointer;
 }
 
-/* ---------------- MOBILE ---------------- */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
-
-  .opening-content {
-    padding: 45px 18px;
-  }
 
   .opening h1 {
     font-size: 42px;
   }
 
-  .bismillah {
-    font-size: 21px;
+  .hero-title {
+    font-size: 19px;
   }
 
-  .hero h2 {
-    font-size: 50px;
+  .names {
+    font-size: 47px;
   }
 
-  .section {
+  .section-frame {
     padding: 70px 18px;
   }
 
-  .section h3 {
-    font-size: 21px;
-  }
-
-  .count-box {
-    width: 72px;
-    min-height: 78px;
-  }
-
-  .count-box span {
-    font-size: 24px;
+  .count-item {
+    width: 70px;
   }
 
   .arabic-dua {
     font-size: 22px;
   }
 
-  .venue-name {
-    font-size: 26px !important;
+  .venue-section h2 {
+    font-size: 26px;
+  }
+
+  .closing h2 {
+    font-size: 42px;
   }
 }
