@@ -3,110 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khaleelu & Fadila | Wedding Invitation</title>
+
+  <title>Khaleelu & Fadila | Nikkah</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Opening Screen -->
-  <section class="opening">
+  <!-- OPENING -->
+  <section class="opening" id="opening">
+
     <div class="opening-content">
-      <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
 
-      <p class="invite-text">Together with their families</p>
+      <p class="bismillah">
+        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+      </p>
 
-      <h1>Khaleelu<br>&amp;<br>Fadila</h1>
+      <p class="tiny-text">
+        TOGETHER WITH THEIR FAMILIES
+      </p>
 
-      <p class="invite-text">request the pleasure of your company</p>
+      <p class="invite-line">
+        WE CORDIALLY INVITE YOU TO
+      </p>
 
-      <button onclick="openInvitation()">Open Invitation</button>
+      <p class="nikkah-title">
+        THE NIKKAH OF
+      </p>
+
+      <h1>
+        Khaleelu
+        <span>&amp;</span>
+        Fadila
+      </h1>
+
+      <p class="date-opening">
+        07 • 01 • 2027
+      </p>
+
+      <button onclick="openInvitation()">
+        OPEN INVITATION
+      </button>
+
     </div>
+
   </section>
 
 
-  <!-- Main Invitation -->
+  <!-- MAIN INVITATION -->
   <main id="invitation">
 
-    <section class="hero">
-      <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
 
-      <p class="small-text">THE WEDDING OF</p>
+    <!-- HERO -->
+    <section class="hero">
+
+      <p class="bismillah">
+        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+      </p>
+
+      <p class="tiny-text">
+        THE NIKKAH OF
+      </p>
 
       <h2>Khaleelu</h2>
-      <span class="and">&amp;</span>
+
+      <div class="ampersand">&amp;</div>
+
       <h2>Fadila</h2>
 
-      <p class="date">07 • 01 • 2027</p>
-      <p class="time">4:00 PM</p>
+      <div class="floral-line">
+        ❦
+      </div>
+
+      <p class="hero-date">
+        THURSDAY<br>
+        <strong>7 JANUARY 2027</strong>
+      </p>
+
+      <p class="hero-time">
+        4:00 PM
+      </p>
+
     </section>
 
 
-    <!-- Countdown -->
+    <!-- COUNTDOWN -->
     <section class="section countdown-section">
-      <h3>Counting Down To Our Special Day</h3>
+
+      <div class="ornament">✦</div>
+
+      <h3>
+        COUNTING DOWN TO OUR SPECIAL DAY
+      </h3>
 
       <div class="countdown">
-        <div>
+
+        <div class="count-box">
           <span id="days">00</span>
-          <small>Days</small>
+          <small>DAYS</small>
         </div>
 
-        <div>
+        <div class="count-box">
           <span id="hours">00</span>
-          <small>Hours</small>
+          <small>HOURS</small>
         </div>
 
-        <div>
+        <div class="count-box">
           <span id="minutes">00</span>
-          <small>Minutes</small>
+          <small>MINUTES</small>
         </div>
 
-        <div>
+        <div class="count-box">
           <span id="seconds">00</span>
-          <small>Seconds</small>
+          <small>SECONDS</small>
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- Event Details -->
-    <section class="section details">
-      <p class="arabic-title">بَارَكَ اللَّهُ لَكُمَا</p>
+    <!-- NIKKAH -->
+    <section class="section event-section">
 
-      <h3>Nikkah</h3>
+      <div class="ornament">
+        ✦
+      </div>
 
-      <p class="detail-date">Thursday, 7 January 2027</p>
-      <p class="detail-time">4:00 PM</p>
+      <h3>NIKKAH</h3>
 
-      <p class="venue-title">Venue</p>
-      <p class="venue">Rahath Melparamba</p>
+      <p class="event-date">
+        THURSDAY, 7 JANUARY 2027
+      </p>
+
+      <p class="event-time">
+        4:00 PM
+      </p>
+
+    </section>
+
+
+    <!-- VENUE -->
+    <section class="section venue-section">
+
+      <div class="ornament">
+        ✦
+      </div>
+
+      <p class="venue-label">
+        VENUE
+      </p>
+
+      <h3 class="venue-name">
+        Rahath Melparamba
+      </h3>
 
       <a
         class="map-button"
         href="https://www.google.com/maps/search/?api=1&query=Rahath+Melparamba"
         target="_blank">
-        📍 View on Google Maps
+        📍 VIEW ON GOOGLE MAPS
       </a>
+
     </section>
 
 
-    <!-- Dua -->
-    <section class="section dua">
+    <!-- DUA -->
+    <section class="section dua-section">
+
+      <div class="ornament">
+        ✦
+      </div>
+
       <p class="arabic-dua">
-        بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا
+        بَارَكَ اللَّهُ لَكُمَا
+        وَبَارَكَ عَلَيْكُمَا
         وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
       </p>
 
       <p class="dua-translation">
-        May Allah bless you both, bless your union,
+        May Allah bless you both,
+        bless your union,
         and bring you together in goodness.
       </p>
+
     </section>
 
 
-    <!-- Music -->
-    <button id="musicButton" class="music-button" onclick="toggleMusic()">
+    <!-- CLOSING -->
+    <section class="footer">
+
+      <p>
+        WITH LOVE &amp; DUAS
+      </p>
+
+      <h4>
+        Khaleelu &amp; Fadila
+      </h4>
+
+    </section>
+
+
+    <!-- MUSIC -->
+    <button
+      id="musicButton"
+      class="music-button"
+      onclick="toggleMusic()">
       🎵
     </button>
 
@@ -114,14 +217,8 @@
       <source src="barakallahu.mp3" type="audio/mpeg">
     </audio>
 
-
-    <!-- Footer -->
-    <section class="footer">
-      <p>With love &amp; duas</p>
-      <h4>Khaleelu &amp; Fadila</h4>
-    </section>
-
   </main>
+
 
   <script src="script.js"></script>
 
