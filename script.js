@@ -9,7 +9,9 @@ function openInvitation() {
 }
 
 
-/* ---------------- COUNTDOWN ---------------- */
+/* =========================
+   COUNTDOWN
+========================= */
 
 const weddingDate = new Date(
   "January 7, 2027 16:00:00"
@@ -21,12 +23,10 @@ function updateCountdown() {
   const distance = weddingDate - now;
 
   if (distance <= 0) {
-
     document.getElementById("days").innerText = "00";
     document.getElementById("hours").innerText = "00";
     document.getElementById("minutes").innerText = "00";
     document.getElementById("seconds").innerText = "00";
-
     return;
   }
 
@@ -64,7 +64,9 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 
-/* ---------------- MUSIC ---------------- */
+/* =========================
+   MUSIC
+========================= */
 
 function toggleMusic() {
 
@@ -75,7 +77,7 @@ function toggleMusic() {
 
     music.play()
       .then(function () {
-        button.innerText = "⏸️";
+        button.innerText = "Ⅱ";
       })
       .catch(function () {
         alert("Please tap the music button again.");
@@ -84,7 +86,42 @@ function toggleMusic() {
   } else {
 
     music.pause();
-    button.innerText = "🎵";
+    button.innerText = "♪";
 
   }
+}
+
+
+/* =========================
+   ADD TO CALENDAR
+========================= */
+
+function addToCalendar() {
+
+  const title = encodeURIComponent(
+    "Nikkah of Khaleelu & Fadila"
+  );
+
+  const details = encodeURIComponent(
+    "Nikkah ceremony of Khaleelu Rahman & Fadila Mariyam"
+  );
+
+  const location = encodeURIComponent(
+    "Rahath Melparamba"
+  );
+
+  const start = "20270107T160000";
+  const end = "20270107T180000";
+
+  const googleCalendar =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + title +
+    "&dates=" + start + "/" + end +
+    "&details=" + details +
+    "&location=" + location;
+
+  window.open(
+    googleCalendar,
+    "_blank"
+  );
 }
