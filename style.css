@@ -10,13 +10,13 @@ html {
 
 body {
   font-family: Georgia, "Times New Roman", serif;
-  background: #3b0b16;
-  color: #f4dfb2;
+  background: #f8f4ec;
+  color: #5b4636;
   text-align: center;
 }
 
 /* =========================
-   OPENING
+   OPENING SCREEN
 ========================= */
 
 .opening {
@@ -26,129 +26,123 @@ body {
   align-items: center;
   justify-content: center;
   padding: 25px;
-
-  background:
-    linear-gradient(rgba(49, 5, 15, 0.72), rgba(49, 5, 15, 0.82)),
-    url("IMG_7223.jpeg") center top / cover no-repeat;
-
+  background: #f8f4ec;
   position: relative;
+}
+
+.opening::before,
+.opening::after {
+  content: "❦";
+  position: absolute;
+  color: #b89b62;
+  font-size: 38px;
+  opacity: 0.65;
+}
+
+.opening::before {
+  top: 45px;
+  left: 35px;
+  transform: rotate(-35deg);
+}
+
+.opening::after {
+  bottom: 45px;
+  right: 35px;
+  transform: rotate(145deg);
 }
 
 .opening-card {
   width: 100%;
   max-width: 430px;
-  padding: 48px 25px;
-
-  border: 1px solid rgba(221, 184, 101, 0.75);
-  background: rgba(45, 4, 12, 0.55);
-
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+  padding: 45px 25px;
+  background: transparent;
+  border: none;
 }
 
 .bismillah {
   font-size: 25px;
   line-height: 2;
-  color: #e4c47c;
+  color: #8c7048;
 }
 
 .opening-small,
 .gold-small {
   font-size: 9px;
-  letter-spacing: 4px;
-  color: #d8b777;
-  margin: 20px 0;
+  letter-spacing: 3px;
+  color: #9d8359;
+  margin: 22px 0;
 }
 
 .opening-invite {
   font-size: 11px;
   letter-spacing: 2px;
-  color: #ead9b2;
+  color: #806c57;
 }
 
 .opening h1 {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: normal;
-  line-height: 1.1;
-  color: #f3d28b;
+  line-height: 1.15;
+  color: #76583e;
   margin: 25px 0;
 }
 
 .opening h1 span {
   display: block;
-  font-size: 25px;
-  margin: 9px 0;
-  color: #c99b4c;
+  font-size: 24px;
+  margin: 8px 0;
+  color: #b29661;
 }
 
 .opening-date {
   font-size: 13px;
   letter-spacing: 4px;
-  color: #ead6aa;
+  color: #8b755d;
 }
 
 .opening button {
-  margin-top: 35px;
+  margin-top: 38px;
   padding: 13px 30px;
-
-  border: 1px solid #d2aa60;
+  border: 1px solid #ad8b57;
   border-radius: 30px;
-
   background: transparent;
-  color: #f3d28b;
-
+  color: #80653f;
   font-family: inherit;
   font-size: 10px;
   letter-spacing: 3px;
 }
 
-
 /* =========================
-   MAIN BACKGROUND
+   MAIN INVITATION
 ========================= */
 
 #invitation {
   display: none;
-
-  background:
-    linear-gradient(
-      rgba(54, 7, 17, 0.72),
-      rgba(54, 7, 17, 0.78)
-    ),
-    url("IMG_7223.jpeg") center top / cover fixed;
-
+  background: #f8f4ec;
   overflow: hidden;
 }
 
-
 /* =========================
-   COMMON SECTION
+   SECTIONS
 ========================= */
 
 .section-frame {
   position: relative;
-  min-height: 80vh;
-
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 80px 24px;
-
-  border-bottom: 1px solid rgba(214, 173, 87, 0.25);
+  border-bottom: 1px solid rgba(160, 128, 82, 0.18);
 }
 
 .section-frame::before {
   content: "❦";
-  color: #c99b4c;
-  font-size: 23px;
+  color: #b69a62;
+  font-size: 24px;
   margin-bottom: 25px;
 }
-
-
-/* =========================
-   HERO
-========================= */
 
 .hero {
   min-height: 100vh;
@@ -159,53 +153,56 @@ body {
   display: none;
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero-bismillah {
   margin-bottom: 25px;
 }
 
 .hero-title {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: normal;
   letter-spacing: 2px;
-  color: #e7d2a1;
+  color: #80684d;
   margin-bottom: 25px;
 }
 
 .names {
-  font-size: 54px;
+  font-size: 52px;
   line-height: 1.05;
   font-weight: normal;
-  color: #f2d18b;
+  color: #73553b;
 }
 
 .names span {
   display: block;
-  font-size: 27px;
+  font-size: 26px;
   margin: 10px 0;
-  color: #c99b4c;
+  color: #b29661;
 }
 
 .hero-date {
   margin-top: 35px;
   font-size: 15px;
   letter-spacing: 3px;
-  color: #ead8b0;
+  color: #806b53;
 }
 
 .hero-time {
   margin-top: 10px;
   font-size: 14px;
   letter-spacing: 3px;
-  color: #c99b4c;
+  color: #aa8957;
 }
-
 
 /* =========================
    COUNTDOWN
 ========================= */
 
 .countdown-section {
-  min-height: 65vh;
+  min-height: 60vh;
 }
 
 .countdown-section h2,
@@ -217,45 +214,42 @@ body {
 .closing h2 {
   font-size: 29px;
   font-weight: normal;
-  color: #f0d08a;
+  color: #76583e;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
   margin-top: 35px;
 }
 
 .count-item {
-  width: 73px;
-  min-height: 78px;
-
+  width: 72px;
+  min-height: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  border: 1px solid rgba(204, 160, 74, 0.65);
-  background: rgba(32, 3, 9, 0.38);
+  border: 1px solid rgba(172, 140, 91, 0.45);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .count-item strong {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: normal;
-  color: #f2d18b;
+  color: #80633f;
 }
 
 .count-item span {
   margin-top: 7px;
   font-size: 8px;
   letter-spacing: 2px;
-  color: #cdb98d;
+  color: #9a8365;
 }
 
-
 /* =========================
-   COUPLE
+   HAPPY COUPLE
 ========================= */
 
 .couple-section {
@@ -273,50 +267,44 @@ body {
 .person p {
   margin-top: 10px;
   font-size: 13px;
-  color: #d9c7a0;
+  color: #8b765f;
 }
 
 .person .parents {
   font-size: 15px;
-  color: #e9d19a;
+  color: #765b40;
 }
 
 .heart {
   font-size: 30px;
-  color: #c99b4c;
+  color: #b2945c;
   margin: 10px 0;
 }
-
 
 /* =========================
    DUA
 ========================= */
 
 .dua-section {
-  min-height: 80vh;
+  min-height: 75vh;
 }
 
 .arabic-dua {
   max-width: 650px;
   margin-top: 35px;
-
   font-size: 27px;
   line-height: 2.1;
-
-  color: #f0d08a;
+  color: #80623f;
 }
 
 .dua-text {
   max-width: 500px;
   margin-top: 30px;
-
   font-size: 14px;
   line-height: 1.9;
-
-  color: #d8c69e;
+  color: #8a765e;
   font-style: italic;
 }
-
 
 /* =========================
    EVENT
@@ -325,39 +313,36 @@ body {
 .event-card {
   width: 100%;
   max-width: 330px;
-
   margin-top: 35px;
   padding: 35px 20px;
-
-  border: 1px solid rgba(205, 163, 79, 0.7);
-  background: rgba(31, 3, 9, 0.38);
+  border: 1px solid rgba(172, 140, 91, 0.45);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .event-icon {
   font-size: 28px;
-  color: #c99b4c;
+  color: #b29661;
   margin-bottom: 20px;
 }
 
 .event-date {
   font-size: 11px;
   letter-spacing: 3px;
-  color: #d7c092;
+  color: #8e785d;
 }
 
 .event-date-big {
   margin-top: 10px;
   font-size: 19px;
   letter-spacing: 2px;
-  color: #f1d18b;
+  color: #76583e;
 }
 
 .event-time {
   margin-top: 15px;
   font-size: 17px;
-  color: #c99b4c;
+  color: #aa8957;
 }
-
 
 /* =========================
    VENUE
@@ -366,30 +351,24 @@ body {
 .venue-description {
   max-width: 430px;
   margin: 25px auto;
-
   font-size: 14px;
   line-height: 1.8;
-  color: #d8c59c;
+  color: #89745c;
 }
 
 .map-button,
 .calendar-button {
   display: inline-block;
-
   padding: 13px 24px;
-
-  border: 1px solid #c99b4c;
+  border: 1px solid #ad8b57;
   border-radius: 30px;
-
   background: transparent;
-  color: #f0d08a;
-
+  color: #80633f;
   font-family: inherit;
   font-size: 10px;
   letter-spacing: 2px;
   text-decoration: none;
 }
-
 
 /* =========================
    CALENDAR
@@ -405,13 +384,12 @@ body {
   margin-bottom: 30px;
 }
 
-
 /* =========================
    CLOSING
 ========================= */
 
 .closing {
-  min-height: 75vh;
+  min-height: 70vh;
 }
 
 .closing::before {
@@ -425,12 +403,12 @@ body {
 .closing-small {
   font-size: 10px;
   letter-spacing: 4px;
-  color: #cdb78a;
+  color: #9a8060;
   margin-bottom: 25px;
 }
 
 .closing h2 {
-  font-size: 48px;
+  font-size: 46px;
   line-height: 1.1;
 }
 
@@ -438,40 +416,33 @@ body {
   display: block;
   font-size: 25px;
   margin: 8px;
-  color: #c99b4c;
+  color: #b29661;
 }
 
 .closing-date {
   margin-top: 30px;
   font-size: 12px;
   letter-spacing: 4px;
-  color: #d8c69d;
+  color: #8c755b;
 }
 
-
 /* =========================
-   MUSIC
+   MUSIC BUTTON
 ========================= */
 
 .music-button {
   position: fixed;
   right: 18px;
   bottom: 18px;
-
-  width: 50px;
-  height: 50px;
-
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  border: 1px solid #d3aa5d;
-
-  background: #4a0a17;
-  color: #f2d18b;
-
-  font-size: 20px;
-
+  border: 1px solid #b29661;
+  background: #f8f4ec;
+  color: #80633f;
+  font-size: 19px;
   z-index: 100;
 }
-
 
 /* =========================
    MOBILE
@@ -496,7 +467,7 @@ body {
   }
 
   .count-item {
-    width: 70px;
+    width: 68px;
   }
 
   .arabic-dua {
