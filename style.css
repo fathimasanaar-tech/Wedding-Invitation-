@@ -519,18 +519,7 @@ transform: translate3d(var(--drift), 110vh, 0) rotate(650deg);
 opacity: 0;
 }
 }
-/* LUXURY WEDDING ENVELOPE */
-
-.opening {
-min-height: 100vh;
-min-height: 100svh;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 30px 15px;
-background: #f8f4ec;
-overflow: hidden;
-}
+/* ENVELOPE DESIGN */
 
 .opening::before,
 .opening::after {
@@ -557,7 +546,7 @@ height: 205px;
 max-width: 90vw;
 margin: 0 auto;
 perspective: 1000px;
-filter: drop-shadow(0 12px 15px rgba(95, 70, 40, 0.16));
+filter: drop-shadow(0 12px 15px rgba(95,70,40,.16));
 }
 
 .envelope-back {
@@ -635,7 +624,7 @@ font-family: Georgia, serif;
 font-size: 17px;
 z-index: 6;
 cursor: pointer;
-box-shadow: 0 3px 10px rgba(80, 55, 20, 0.25);
+box-shadow: 0 3px 10px rgba(80,55,20,.25);
 }
 
 .envelope-seal small {
@@ -656,8 +645,6 @@ font-size: 12px;
 letter-spacing: 3px;
 }
 
-/* ENVELOPE OPENING */
-
 .opening.opening-active .envelope-flap {
 transform: rotateX(180deg);
 z-index: 1;
@@ -670,7 +657,5 @@ transform: translateY(-155px);
 .opening.opening-active .envelope-seal {
 opacity: 0;
 pointer-events: none;
-transition: opacity 0.3s ease;
+transition: opacity .3s ease;
 }
-
-
