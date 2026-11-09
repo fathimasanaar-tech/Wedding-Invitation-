@@ -602,10 +602,9 @@ height: 58%;
 background: #f0e5d3;
 clip-path: polygon(0 0, 100% 0, 50% 100%);
 transform-origin: top center;
-transform: rotateX(0deg);
 transition: transform 1s ease;
-z-index: 7;
-backface-visibility: visible;
+z-index: 5;
+
 }
 
 
@@ -615,7 +614,7 @@ inset: 0;
 background: #e8d8bd;
 clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
 border: 1px solid #c6a66b;
-z-index: 4;
+z-index: 6;
 }
 
 .envelope-seal {
@@ -673,8 +672,8 @@ letter-spacing: 3px;
 /* ENVELOPE OPENING ANIMATION */
 
 .opening.opening-active .envelope-flap {
-transform: rotateX(180deg);
-z-index: 7;
+transform: rotateX(-180deg);
+z-index: 3;
 }
 
 .opening.opening-active .invitation-preview {
