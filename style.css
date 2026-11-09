@@ -519,6 +519,60 @@ transform: translate3d(var(--drift), 110vh, 0) rotate(650deg);
 opacity: 0;
 }
 }
+<!-- OPENING ENVELOPE -->
+<section class="opening" id="opening">
+
+<div class="envelope-scene">
+
+<p class="bismillah">
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+</p>
+
+<p class="envelope-top-text">
+YOU ARE CORDIALLY INVITED
+</p>
+
+<div class="envelope">
+
+<!-- INVITATION CARD -->
+<div class="invitation-preview">
+<p>THE WEDDING OF</p>
+<h1>Khaleelu <span>&amp;</span> Fadila</h1>
+<p>07 · 01 · 2027</p>
+</div>
+
+<!-- ENVELOPE BACK -->
+<div class="envelope-back"></div>
+
+<!-- ENVELOPE FLAP -->
+<div class="envelope-flap"></div>
+
+<!-- ENVELOPE FRONT -->
+<div class="envelope-front"></div>
+
+<!-- GOLD WAX SEAL -->
+<button
+class="envelope-seal"
+onclick="openInvitation()"
+aria-label="Open wedding invitation">
+
+<span>K <small>&amp;</small> F</span>
+
+</button>
+
+</div>
+
+<p class="envelope-hint">
+TAP THE GOLD SEAL TO OPEN
+</p>
+
+<p class="envelope-date">
+07 · 01 · 2027
+</p>
+
+</div>
+
+</section>
 
 
 
