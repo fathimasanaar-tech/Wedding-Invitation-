@@ -1,39 +1,27 @@
 function openInvitation() {
 
-  document.getElementById("opening").style.display = "none";
+const music = document.getElementById("weddingMusic");
+const button = document.getElementById("musicButton");
 
-  document.getElementById("invitation").style.display = "block";
+document.getElementById("opening").style.display = "none";
+document.getElementById("invitation").style.display = "block";
 
-  window.scrollTo({
+// Start music from the opening button tap
+music.volume = 0.7;
 
-    top: 0,
+music.play()
+.then(function () {
+button.innerText = "Ⅱ";
+})
+.catch(function (error) {
+console.log("Music playback error:", error);
+alert("Please tap the music button to start the song.");
+});
 
-    behavior: "smooth"
-
-  });
-
-  // Automatically start wedding music
-
-  const music = document.getElementById("weddingMusic");
-
-  const button = document.getElementById("musicButton");
-
-  music.volume = 0.7;
-
-  music.play()
-
-    .then(function () {
-
-      button.innerText = "Ⅱ";
-
-    })
-
-    .catch(function (error) {
-
-      console.log("Music could not start:", error);
-
-    });
-
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
 }
 
 
