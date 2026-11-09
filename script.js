@@ -3,7 +3,7 @@ function showRoseShower() {
 // Remove any previous petals
 document.querySelectorAll(".rose-petal").forEach(p => p.remove());
 
-for (let i = 0; i < 90; i++) {
+for (let i = 0; i < 200; i++) {
 
 const petal = document.createElement("span");
 petal.className = "rose-petal";
