@@ -11,8 +11,8 @@ petal.style.setProperty(
 (Math.random() - 0.5) * 250 + "px"
 );
 
-petal.style.width = (12 + Math.random() * 12) + "px";
-petal.style.height = (18 + Math.random() * 14) + "px";
+petal.style.width = (8 + Math.random() * 5) + "px";
+petal.style.height = (12 + Math.random() * 6) + "px";
 
 document.body.appendChild(petal);
 
