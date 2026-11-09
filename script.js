@@ -38,6 +38,16 @@ const button = document.getElementById("musicButton");
 
 // Start envelope opening animation
 opening.classList.add("opening-active");
+   // Start music as soon as the envelope begins opening
+music.volume = 0.7;
+
+music.play()
+.then(function () {
+button.innerText = "Ⅱ";
+})
+.catch(function (error) {
+console.log("Music playback error:", error);
+});
 
 // Wait for the envelope to open
 setTimeout(function () {
@@ -45,13 +55,7 @@ setTimeout(function () {
 opening.style.display = "none";
 document.getElementById("invitation").style.display = "block";
 
-// Start wedding music
-music.volume = 0.7;
 
-music.play()
-.then(function () {
-button.innerText = "Ⅱ";
-})
 .catch(function (error) {
 console.log("Music playback error:", error);
 alert("Please tap the music button to start the song.");
