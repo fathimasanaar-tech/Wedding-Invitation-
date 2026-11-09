@@ -31,15 +31,21 @@ setTimeout(() => petal.remove(), 22000);
 }
 
 function openInvitation() {
-    showRoseShower();
 
+const opening = document.getElementById("opening");
 const music = document.getElementById("weddingMusic");
 const button = document.getElementById("musicButton");
 
-document.getElementById("opening").style.display = "none";
+// Start envelope opening animation
+opening.classList.add("opening-active");
+
+// Wait for the envelope to open
+setTimeout(function () {
+
+opening.style.display = "none";
 document.getElementById("invitation").style.display = "block";
 
-// Start music from the opening button tap
+// Start wedding music
 music.volume = 0.7;
 
 music.play()
@@ -55,9 +61,14 @@ window.scrollTo({
 top: 0,
 behavior: "smooth"
 });
-  
- 
+
+// Start rose petal shower
+showRoseShower();
+
+}, 1600);
+
 }
+
 
 
 /* =========================
