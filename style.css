@@ -546,7 +546,9 @@ height: 205px;
 max-width: 90vw;
 margin: 0 auto;
 perspective: 1000px;
+transform-style: preserve-3d;
 filter: drop-shadow(0 12px 15px rgba(95,70,40,.16));
+  
 }
 
 .envelope-back {
@@ -598,7 +600,7 @@ clip-path: polygon(0 0, 100% 0, 50% 58%);
 transform-origin: top center;
 transition: transform 1s ease;
 z-index: 5;
-  transform-style:preserve-3d;
+  
 }
 
 .envelope-front {
@@ -665,8 +667,10 @@ letter-spacing: 3px;
 /* ENVELOPE OPENING ANIMATION */
 
 .opening.opening-active .envelope-flap {
-transform: rotateX(180deg);
+transform: rotateX(160deg);
+  transform-origin: top center;
 z-index: 11;
+  transition : transform 1s ease;
 
 }
 
