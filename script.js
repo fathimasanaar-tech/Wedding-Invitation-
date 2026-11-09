@@ -16,8 +16,8 @@ petal.style.height = (size * 1.4) + "px";
 
 petal.style.opacity = 0.2 + Math.random() * 0.25;
 
-petal.style.animationDuration = (6 + Math.random() * 5) + "s";
-petal.style.animationDelay = Math.random() * 2 + "s";
+petal.style.animationDuration = (10 + Math.random() * 5) + "s";
+petal.style.animationDelay = Math.random() * 5 + "s";
 
 petal.style.setProperty(
 "--drift",
@@ -26,7 +26,7 @@ petal.style.setProperty(
 
 document.body.appendChild(petal);
 
-setTimeout(() => petal.remove(), 13000);
+setTimeout(() => petal.remove(), 22000);
 }
 }
 
