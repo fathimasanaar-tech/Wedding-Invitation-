@@ -646,7 +646,7 @@ letter-spacing: 3px;
 }
 
 .opening.opening-active .envelope-flap {
-transform: rotateX(180deg);
+transform: rotateX(-180deg);
 }
 
 .opening.opening-active .invitation-preview {
