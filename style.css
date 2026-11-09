@@ -519,7 +519,9 @@ transform: translate3d(var(--drift), 110vh, 0) rotate(650deg);
 opacity: 0;
 }
 }
-/* ENVELOPE DESIGN */
+/* =========================
+ENVELOPE DESIGN
+========================= */
 
 .opening::before,
 .opening::after {
@@ -545,11 +547,9 @@ width: 310px;
 height: 205px;
 max-width: 90vw;
 margin: 0 auto;
-perspective: 1000px;
-transform-style: preserve-3d;
-
-  
 }
+
+/* Envelope base */
 
 .envelope-back {
 position: absolute;
@@ -557,8 +557,11 @@ inset: 0;
 background: #e9dcc5;
 border: 1px solid #c6a66b;
 border-radius: 5px;
-  box-shadow: 0 12px 15px rgba(95,70,40,16);
+box-shadow: 0 12px 15px rgba(95, 70, 40, .16);
+z-index: 1;
 }
+
+/* Invitation card */
 
 .invitation-preview {
 position: absolute;
@@ -593,56 +596,62 @@ font-weight: normal;
 color: #b79555;
 }
 
+/* Triangular envelope flap */
+
 .envelope-flap {
 position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+top: 0;
+left: 0;
+width: 100%;
 height: 58%;
 background: #f0e5d3;
 clip-path: polygon(0 0, 100% 0, 50% 100%);
-transform-origin: top center;
+transform-origin: 50% 0%;
+transform: rotate(0deg);
 transition: transform 1s ease;
-z-index: 7;
-
+z-index: 5;
 }
 
+/* Envelope front */
 
 .envelope-front {
 position: absolute;
 inset: 0;
 background: #e8d8bd;
-clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+clip-path: polygon(
+0 0,
+50% 58%,
+100% 0,
+100% 100%,
+0 100%
+);
 border: 1px solid #c6a66b;
 z-index: 6;
 }
+
+/* Gold wax seal */
 
 .envelope-seal {
 position: absolute;
 top: 48%;
 left: 50%;
 transform: translate(-50%, -50%);
-
 width: 48px;
 height: 48px;
 border-radius: 50%;
-
 border: 1px solid #b18a45;
-
-background:
-radial-gradient(circle at 30% 25%,
+background: radial-gradient(
+circle at 30% 25%,
 #f5dfa0 0%,
 #d8b66d 35%,
 #b58a42 70%,
-#8e672e 100%);
-
+#8e672e 100%
+);
 color: #fff9e9;
 font-family: Georgia, serif;
 font-size: 14px;
-
-z-index: 6;
+z-index: 7;
 cursor: pointer;
-
 box-shadow:
 inset 0 2px 4px rgba(255,255,255,.45),
 inset 0 -3px 5px rgba(80,50,15,.25),
@@ -653,7 +662,7 @@ inset 0 -3px 5px rgba(80,50,15,.25),
 font-size: 9px;
 }
 
-/* ENVELOPE HINT */
+/* Envelope text */
 
 .envelope-hint {
 margin-top: 35px;
@@ -669,12 +678,10 @@ font-size: 12px;
 letter-spacing: 3px;
 }
 
-/* ENVELOPE OPENING ANIMATION */
+/* Opening animation */
 
 .opening.opening-active .envelope-flap {
-transform: translateY(-100%) rotate(180deg);
-  transform-origin: center center;
-z-index: 7;
+transform: rotate(180deg);
 }
 
 .opening.opening-active .invitation-preview {
@@ -687,4 +694,5 @@ opacity: 0;
 pointer-events: none;
 transition: opacity .3s ease;
 }
+
 
