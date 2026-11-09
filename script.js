@@ -165,26 +165,6 @@ function addToCalendar() {
     "_blank"
   );
 }
-function showFlowerPopper() {
-const flowers = ["🌹", "🌺", "🌹", "🌺", "❤️", "🌹"];
 
-for (let i = 0; i < 35; i++) {
-const flower = document.createElement("span");
-
-flower.className = "flower-popper";
-flower.innerText =
-flowers[Math.floor(Math.random() * flowers.length)];
-
-flower.style.setProperty(
-"--x", (Math.random() - 0.5) * 700 + "px"
-);
-
-flower.style.setProperty(
-"--y", (Math.random() - 0.5) * 700 + "px"
-);
-
-document.body.appendChild(flower);
-
-setTimeout(() => flower.remove(), 2600);
 }
 }
