@@ -21,6 +21,7 @@ setTimeout(() => petal.remove(), 11000);
 }
 
 function openInvitation() {
+    showRoseShower();
 
 const music = document.getElementById("weddingMusic");
 const button = document.getElementById("musicButton");
@@ -44,7 +45,7 @@ window.scrollTo({
 top: 0,
 behavior: "smooth"
 });
-   showRoseShower();
+  
  
 }
 
