@@ -673,7 +673,7 @@ letter-spacing: 3px;
 /* ENVELOPE OPENING ANIMATION */
 
 .opening.opening-active .envelope-flap {
-transform: rotateX(-155deg);
+transform: rotateX(180deg);
 z-index: 7;
 }
 
