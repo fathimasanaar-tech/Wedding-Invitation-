@@ -482,74 +482,7 @@ body {
     font-size: 42px;
   }
 }
-/* RED ROSE PETAL SHOWER */
-.rose-petal {
-position: fixed;
-top: -40px;
-width: 18px;
-height: 25px;
-background: radial-gradient(ellipse at 35% 30%, #ff7777, #c00024 65%, #650018);
-border-radius: 80% 10% 80% 10%;
-pointer-events: none;
-z-index: 99999;
-animation: petalFall linear forwards;
-}
 
-@keyframes petalFall {
-0% {
-transform: translate3d(0, -40px, 0) rotate(0deg);
-opacity: 0;
-}
-10% {
-opacity: 1;
-}
-100% {
-transform: translate3d(var(--drift), 110vh, 0) rotate(900deg);
-opacity: 0.7;
-}
-}
-/* ELEGANT RED ROSE PETAL SHOWER */
-
-.rose-petal {
-position: fixed;
-top: -45px;
-left: 0;
-width: 20px;
-height: 30px;
-background:
-radial-gradient(
-ellipse at 30% 25%,
-#ffb0b0 0%,
-#e52b45 35%,
-#a00020 75%,
-#590014 100%
-);
-border-radius: 90% 10% 80% 20%;
-box-shadow: 1px 2px 4px rgba(80, 0, 15, 0.2);
-pointer-events: none;
-z-index: 999999;
-animation: roseFall linear forwards;
-}
-
-@keyframes roseFall {
-0% {
-transform: translate3d(0, -40px, 0) rotate(0deg) scale(0.8);
-opacity: 0;
-}
-
-10% {
-opacity: 1;
-}
-
-50% {
-transform: translate3d(var(--drift), 50vh, 0) rotate(400deg) scale(1);
-}
-
-100% {
-transform: translate3d(calc(var(--drift) * -0.4), 110vh, 0) rotate(850deg) scale(0.8);
-opacity: 0;
-}
-}
 /* SOFT FADED RED ROSE PETALS */
 
 .rose-petal {
