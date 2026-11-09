@@ -666,8 +666,9 @@ letter-spacing: 3px;
 .opening.opening-active .envelope-flap {
 transform: rotateX(180deg);
   transform-origin: top center;
-z-index: 5;
+z-index: 7;
   transition: transform 1s ease;
+  backfce-visibility:hidden;
 }
 
 .opening.opening-active .invitation-preview {
