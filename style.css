@@ -550,3 +550,43 @@ transform: translate3d(calc(var(--drift) * -0.4), 110vh, 0) rotate(850deg) scale
 opacity: 0;
 }
 }
+/* SOFT FADED RED ROSE PETALS */
+
+.rose-petal {
+position: fixed;
+top: -35px;
+left: 0;
+width: 11px;
+height: 16px;
+background: radial-gradient(
+ellipse at 30% 25%,
+#eaa0a5,
+#c75b68 60%,
+#963b4b
+);
+border-radius: 90% 10% 80% 20%;
+opacity: 0.55;
+pointer-events: none;
+z-index: 999999;
+animation: roseFall linear forwards;
+}
+
+@keyframes roseFall {
+0% {
+transform: translate3d(0, -30px, 0) rotate(0deg);
+opacity: 0;
+}
+
+15% {
+opacity: 0.55;
+}
+
+100% {
+transform: translate3d(var(--drift), 110vh, 0) rotate(650deg);
+opacity: 0;
+}
+}
+
+
+petal.style.width = (8 + Math.random() * 5) + "px";
+petal.style.height = (12 + Math.random() * 6) + "px";
