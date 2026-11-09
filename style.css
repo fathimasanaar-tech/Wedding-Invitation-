@@ -519,60 +519,158 @@ transform: translate3d(var(--drift), 110vh, 0) rotate(650deg);
 opacity: 0;
 }
 }
-<!-- OPENING ENVELOPE -->
-<section class="opening" id="opening">
+/* LUXURY WEDDING ENVELOPE */
 
-<div class="envelope-scene">
+.opening {
+min-height: 100vh;
+min-height: 100svh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px 15px;
+background: #f8f4ec;
+overflow: hidden;
+}
 
-<p class="bismillah">
-بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
-</p>
+.opening::before,
+.opening::after {
+display: none;
+}
 
-<p class="envelope-top-text">
-YOU ARE CORDIALLY INVITED
-</p>
+.envelope-scene {
+width: 100%;
+max-width: 430px;
+text-align: center;
+}
 
-<div class="envelope">
+.envelope-top-text {
+font-size: 10px;
+letter-spacing: 4px;
+color: #a88750;
+margin: 28px 0 35px;
+}
 
-<!-- INVITATION CARD -->
-<div class="invitation-preview">
-<p>THE WEDDING OF</p>
-<h1>Khaleelu <span>&amp;</span> Fadila</h1>
-<p>07 · 01 · 2027</p>
-</div>
+.envelope {
+position: relative;
+width: 310px;
+height: 205px;
+max-width: 90vw;
+margin: 0 auto;
+perspective: 1000px;
+filter: drop-shadow(0 12px 15px rgba(95, 70, 40, 0.16));
+}
 
-<!-- ENVELOPE BACK -->
-<div class="envelope-back"></div>
+.envelope-back {
+position: absolute;
+inset: 0;
+background: #e9dcc5;
+border: 1px solid #c6a66b;
+border-radius: 5px;
+}
 
-<!-- ENVELOPE FLAP -->
-<div class="envelope-flap"></div>
+.invitation-preview {
+position: absolute;
+width: 88%;
+height: 175px;
+left: 6%;
+top: 10px;
+background: #fffdf8;
+border: 1px solid #d4b77d;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 12px;
+color: #80643f;
+transition: transform 1.3s ease;
+z-index: 2;
+}
 
-<!-- ENVELOPE FRONT -->
-<div class="envelope-front"></div>
+.invitation-preview p {
+font-size: 9px;
+letter-spacing: 2px;
+}
 
-<!-- GOLD WAX SEAL -->
-<button
-class="envelope-seal"
-onclick="openInvitation()"
-aria-label="Open wedding invitation">
+.invitation-preview h1 {
+font-family: Georgia, serif;
+font-size: 23px;
+font-weight: normal;
+}
 
-<span>K <small>&amp;</small> F</span>
+.invitation-preview h1 span {
+color: #b79555;
+}
 
-</button>
+.envelope-flap {
+position: absolute;
+inset: 0;
+background: #f0e5d3;
+clip-path: polygon(0 0, 100% 0, 50% 58%);
+transform-origin: top center;
+transition: transform 1s ease;
+z-index: 5;
+}
 
-</div>
+.envelope-front {
+position: absolute;
+inset: 0;
+background: #e8d8bd;
+clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+border: 1px solid #c6a66b;
+z-index: 4;
+}
 
-<p class="envelope-hint">
-TAP THE GOLD SEAL TO OPEN
-</p>
+.envelope-seal {
+position: absolute;
+top: 45%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 63px;
+height: 63px;
+border-radius: 50%;
+border: 2px solid #d8bd83;
+background: radial-gradient(circle, #d8b66d, #a9823e);
+color: #fffaf0;
+font-family: Georgia, serif;
+font-size: 17px;
+z-index: 6;
+cursor: pointer;
+box-shadow: 0 3px 10px rgba(80, 55, 20, 0.25);
+}
 
-<p class="envelope-date">
-07 · 01 · 2027
-</p>
+.envelope-seal small {
+font-size: 11px;
+}
 
-</div>
+.envelope-hint {
+margin-top: 35px;
+color: #a88750;
+font-size: 10px;
+letter-spacing: 3px;
+}
 
-</section>
+.envelope-date {
+margin-top: 15px;
+color: #806b50;
+font-size: 12px;
+letter-spacing: 3px;
+}
 
+/* ENVELOPE OPENING */
+
+.opening.opening-active .envelope-flap {
+transform: rotateX(180deg);
+z-index: 1;
+}
+
+.opening.opening-active .invitation-preview {
+transform: translateY(-155px);
+}
+
+.opening.opening-active .envelope-seal {
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease;
+}
 
 
