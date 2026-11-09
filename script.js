@@ -38,7 +38,8 @@ const button = document.getElementById("musicButton");
 
 // Start envelope opening animation
 opening.classList.add("opening-active");
-   // Start music as soon as the envelope begins opening
+
+// Start music immediately when the seal is tapped
 music.volume = 0.7;
 
 music.play()
@@ -49,17 +50,12 @@ button.innerText = "Ⅱ";
 console.log("Music playback error:", error);
 });
 
-// Wait for the envelope to open
+// Wait for the envelope animation to finish
 setTimeout(function () {
 
 opening.style.display = "none";
+
 document.getElementById("invitation").style.display = "block";
-
-
-.catch(function (error) {
-console.log("Music playback error:", error);
-alert("Please tap the music button to start the song.");
-});
 
 window.scrollTo({
 top: 0,
@@ -72,7 +68,6 @@ showRoseShower();
 }, 1600);
 
 }
-
 
 
 /* =========================
