@@ -600,8 +600,9 @@ clip-path: polygon(0 0, 100% 0, 50% 58%);
 transform-origin: top center;
 transition: transform 1s ease;
 z-index: 5;
-  
+backface-visibility: hidden;
 }
+
 
 .envelope-front {
 position: absolute;
@@ -667,12 +668,8 @@ letter-spacing: 3px;
 /* ENVELOPE OPENING ANIMATION */
 
 .opening.opening-active .envelope-flap {
-transform: rotateX(180deg);
-  transform-origin: top center;
+transform: rotateX(-180deg);
 z-index: 5;
-  transition : transform 1s ease;
-  backface-visibility: hidden;
-
 }
 
 .opening.opening-active .invitation-preview {
@@ -685,3 +682,4 @@ opacity: 0;
 pointer-events: none;
 transition: opacity .3s ease;
 }
+
