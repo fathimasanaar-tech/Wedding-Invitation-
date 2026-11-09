@@ -643,7 +643,9 @@ inset 0 -3px 5px rgba(80,50,15,.25),
 
 .envelope-seal small {
 font-size: 9px;
+}
 
+/* ENVELOPE HINT */
 
 .envelope-hint {
 margin-top: 35px;
@@ -659,6 +661,8 @@ font-size: 12px;
 letter-spacing: 3px;
 }
 
+/* ENVELOPE OPENING ANIMATION */
+
 .opening.opening-active .envelope-flap {
 transform: rotateX(180deg);
 z-index: 1;
@@ -666,6 +670,7 @@ z-index: 1;
 
 .opening.opening-active .invitation-preview {
 transform: translateY(-155px);
+z-index: 10;
 }
 
 .opening.opening-active .envelope-seal {
