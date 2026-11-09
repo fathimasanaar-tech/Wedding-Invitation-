@@ -1,22 +1,32 @@
 function showRoseShower() {
-for (let i = 0; i < 65; i++) {
+
+// Remove any previous petals
+document.querySelectorAll(".rose-petal").forEach(p => p.remove());
+
+for (let i = 0; i < 90; i++) {
+
 const petal = document.createElement("span");
 petal.className = "rose-petal";
 
 petal.style.left = Math.random() * 100 + "vw";
-petal.style.animationDuration = (4 + Math.random() * 4) + "s";
-petal.style.animationDelay = Math.random() * 3 + "s";
+
+const size = 5 + Math.random() * 5;
+petal.style.width = size + "px";
+petal.style.height = (size * 1.4) + "px";
+
+petal.style.opacity = 0.2 + Math.random() * 0.25;
+
+petal.style.animationDuration = (6 + Math.random() * 5) + "s";
+petal.style.animationDelay = Math.random() * 2 + "s";
+
 petal.style.setProperty(
 "--drift",
-(Math.random() - 0.5) * 250 + "px"
+(Math.random() - 0.5) * 150 + "px"
 );
-
-petal.style.width = (8 + Math.random() * 5) + "px";
-petal.style.height = (12 + Math.random() * 6) + "px";
 
 document.body.appendChild(petal);
 
-setTimeout(() => petal.remove(), 11000);
+setTimeout(() => petal.remove(), 13000);
 }
 }
 
