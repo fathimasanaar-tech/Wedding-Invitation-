@@ -594,13 +594,16 @@ color: #b79555;
 
 .envelope-flap {
 position: absolute;
-inset: 0;
+  top: 0;
+  left: 0;
+  width: 0;
+height: 0;
 background: #f0e5d3;
-clip-path: polygon(0 0, 100% 0, 50% 58%);
+clip-path: polygon(0 0, 100% 0, 50% 100%);
 transform-origin: top center;
 transition: transform 1s ease;
-z-index: 5;
-backface-visibility: hidden;
+z-index: 7;
+backface-visibility: visible;
 }
 
 
@@ -669,7 +672,7 @@ letter-spacing: 3px;
 
 .opening.opening-active .envelope-flap {
 transform: rotateX(180deg);
-z-index: 5;
+z-index: 7;
 }
 
 .opening.opening-active .invitation-preview {
