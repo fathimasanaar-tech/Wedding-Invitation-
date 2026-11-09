@@ -665,7 +665,8 @@ letter-spacing: 3px;
 
 .opening.opening-active .envelope-flap {
 transform: rotateX(180deg);
-z-index: 1;
+  transform-origin: top center;
+z-index: 5;
   transition: transform 1s ease;
 }
 
