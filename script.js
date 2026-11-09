@@ -1,3 +1,25 @@
+function showRoseShower() {
+for (let i = 0; i < 65; i++) {
+const petal = document.createElement("span");
+petal.className = "rose-petal";
+
+petal.style.left = Math.random() * 100 + "vw";
+petal.style.animationDuration = (4 + Math.random() * 4) + "s";
+petal.style.animationDelay = Math.random() * 3 + "s";
+petal.style.setProperty(
+"--drift",
+(Math.random() - 0.5) * 250 + "px"
+);
+
+petal.style.width = (12 + Math.random() * 12) + "px";
+petal.style.height = (18 + Math.random() * 14) + "px";
+
+document.body.appendChild(petal);
+
+setTimeout(() => petal.remove(), 11000);
+}
+}
+
 function openInvitation() {
 
 const music = document.getElementById("weddingMusic");
@@ -22,7 +44,8 @@ window.scrollTo({
 top: 0,
 behavior: "smooth"
 });
-   showFlowerPopper();
+   showRoseShower();
+ 
 }
 
 
