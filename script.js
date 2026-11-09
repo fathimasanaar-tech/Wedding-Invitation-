@@ -1,11 +1,39 @@
 function openInvitation() {
+
   document.getElementById("opening").style.display = "none";
+
   document.getElementById("invitation").style.display = "block";
 
   window.scrollTo({
+
     top: 0,
+
     behavior: "smooth"
+
   });
+
+  // Automatically start wedding music
+
+  const music = document.getElementById("weddingMusic");
+
+  const button = document.getElementById("musicButton");
+
+  music.volume = 0.7;
+
+  music.play()
+
+    .then(function () {
+
+      button.innerText = "Ⅱ";
+
+    })
+
+    .catch(function (error) {
+
+      console.log("Music could not start:", error);
+
+    });
+
 }
 
 
