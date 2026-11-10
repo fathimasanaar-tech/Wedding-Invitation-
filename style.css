@@ -591,13 +591,18 @@ color: #b79555;
 }
 
 .envelope-flap {
-position: absolute;
-inset: 0;
-background: #f0e5d3;
-clip-path: polygon(0 0, 100% 0, 50% 58%);
-transform-origin: top center;
-transition: transform 1s ease;
-z-index: 5;
+  position: absolute;
+  inset: 0;
+  background: #f0e5d3;
+  clip-path: polygon(0 0, 100% 0, 50% 58%);
+  transform-origin: 50% 0%;
+  transition: transform 1s ease;
+  z-index: 5;
+  backface-visibility: hidden;
+}
+
+.opening.opening-active .envelope-flap {
+  transform: rotateX(-150deg);
 }
 
 .envelope-front {
