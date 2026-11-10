@@ -647,10 +647,7 @@ font-size: 12px;
 letter-spacing: 3px;
 }
 
-.opening.opening-active .envelope-flap {
-transform: rotateX(-180deg);
-  z-index: 5;
-}
+
 
 .opening.opening-active .invitation-preview {
 transform: translateY(-155px);
