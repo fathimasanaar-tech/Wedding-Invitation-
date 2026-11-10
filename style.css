@@ -601,9 +601,6 @@ color: #b79555;
   backface-visibility: hidden;
 }
 
-.opening.opening-active .envelope-flap {
-  transform: rotateX(-150deg);
-}
 
 .envelope-front {
 position: absolute;
@@ -663,4 +660,8 @@ transform: translateY(-155px);
 opacity: 0;
 pointer-events: none;
 transition: opacity .3s ease;
+}
+.opening.opening-active .envelope-flap {
+  transform: rotateX(-150deg);
+  z-index: 5;
 }
