@@ -604,12 +604,43 @@ color: #b79555;
 
 
 .envelope-front {
-position: absolute;
-inset: 0;
-background: #e8d8bd;
-clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
-border: 1px solid #c6a66b;
-z-index: 4;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #f1e5d0,
+    #e8d8bd,
+    #f3e8d5
+  );
+  clip-path: polygon(
+    0 0,
+    50% 58%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  border: 1px solid #c6a66b;
+  z-index: 4;
+}
+
+.envelope-front::before,
+.envelope-front::after {
+  content: "❧";
+  position: absolute;
+  top: 42%;
+  color: #a9823e;
+  font-size: 42px;
+  opacity: 0.9;
+}
+
+.envelope-front::before {
+  left: 7%;
+  transform: rotate(-25deg);
+}
+
+.envelope-front::after {
+  right: 7%;
+  transform: scaleX(-1) rotate(-25deg);
 }
 
 .envelope-seal {
