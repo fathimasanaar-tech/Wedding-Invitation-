@@ -660,6 +660,6 @@ pointer-events: none;
 transition: opacity .3s ease;
 }
 .opening.opening-active .envelope-flap {
-  transform: rotateX(-150deg);
+  transform: rotateX(150deg);
   z-index: 5;
 }
