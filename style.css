@@ -597,7 +597,7 @@ color: #b79555;
   background: #f0e5d3;
   clip-path: polygon(0 0, 100% 0, 50% 58%);
   transform-origin: 50% 0%;
-  transition: transform 1s ease;
+  
   z-index: 5;
   backface-visibility: hidden;
 }
@@ -659,7 +659,23 @@ opacity: 0;
 pointer-events: none;
 transition: opacity .3s ease;
 }
+@keyframes flapOpen {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 5;
+  }
+
+  99% {
+    transform: rotateX(-179deg);
+    z-index: 5;
+  }
+
+  100% {
+    transform: rotateX(-180deg);
+    z-index: 1;
+  }
+}
+
 .opening.opening-active .envelope-flap {
-  transform: rotateX(150deg);
-  z-index: 5;
+  animation: flapOpen 1s ease forwards;
 }
